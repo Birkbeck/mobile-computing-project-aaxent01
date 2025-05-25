@@ -8,12 +8,114 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/AppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Andreea Cooking"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <TextView
+        android:id="@+id/RecipesCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/AppTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <GridLayout
+        android:id="@+id/gridRecipesCategories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@id/RecipesCategories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/BreakfastButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Breakfast"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/BrunchButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Brunch"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/LunchButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Lunch"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/DinnerButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Dinner"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/DessertsButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Desserts"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/OtherButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Other"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/AllRecipesButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="2"
+            android:text="All Recipes" />
+    </GridLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
