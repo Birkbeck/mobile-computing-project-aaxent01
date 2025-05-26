@@ -20,6 +20,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.082" />
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:queryHint="Search for recipe"
+        app:iconifiedByDefault="false"
+        app:layout_constraintTop_toBottomOf="@id/AppTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
     <TextView
         android:id="@+id/RecipesCategories"
         android:layout_width="wrap_content"
@@ -52,7 +63,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="Breakfast"/>
+            android:text="Breakfast"
+            android:textColor="@color/orange"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/BrunchButton"
@@ -62,7 +74,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="Brunch"/>
+            android:text="Brunch"
+            android:textColor="@color/orange"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/LunchButton"
@@ -72,7 +85,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="Lunch"/>
+            android:text="Lunch"
+            android:textColor="@color/orange"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/DinnerButton"
@@ -82,7 +96,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="Dinner"/>
+            android:text="Dinner"
+            android:textColor="@color/orange"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/DessertsButton"
@@ -92,7 +107,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="Desserts"/>
+            android:text="Desserts"
+            android:textColor="@color/orange"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/OtherButton"
@@ -102,7 +118,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="Other"/>
+            android:text="Other"
+            android:textColor="@color/orange"/>
 
 
         <com.google.android.material.button.MaterialButton
@@ -114,8 +131,26 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="2"
-            android:text="All Recipes" />
+            android:text="All Recipes"
+            android:textColor="@color/orange"/>
     </GridLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addRecipeButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Recipe"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:icon="@drawable/ic_add_recipe"
+        app:iconGravity="top"
+        app:iconSize="16dp"
+        app:iconTint="@color/black"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
