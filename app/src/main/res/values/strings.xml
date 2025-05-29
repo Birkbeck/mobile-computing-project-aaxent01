@@ -2,4 +2,15 @@
     <string name="app_name">AndreeaAxente</string>
     <string name="recipe_name">Recipe name</string>
     <string name="cooking_time">Cooking time</string>
+    <string name="ingredients_placeholder">
+        • Ingredient 1 \n
+        • Ingredient 2 \n
+        • Ingredient 3 \n
+    </string>
+    <string name="steps_placeholder">
+        1. Step 1 \n
+        2. Step 2 \n
+        3. Step 3 \n
+    </string>
+
 </resources>
