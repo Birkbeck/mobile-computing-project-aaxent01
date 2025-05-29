@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndreeaAxente</string>
+    <string name="recipe_name">Recipe name</string>
+    <string name="cooking_time">Cooking time</string>
 </resources>
