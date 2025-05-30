@@ -121,5 +121,41 @@
         </LinearLayout>
     </ScrollView>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/editRecipeButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="16dp"
+        android:text="Edit Recipe"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:icon="@drawable/ic_pen"
+        app:iconGravity="top"
+        app:iconSize="16dp"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="onEditRecipeClicked"/>
+    
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/deleteRecipeButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="16dp"
+        android:text="Delete Recipe"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:icon="@drawable/ic_bin"
+        app:iconGravity="top"
+        app:iconSize="16dp"
+        app:iconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="onDeleteRecipeClicked"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
