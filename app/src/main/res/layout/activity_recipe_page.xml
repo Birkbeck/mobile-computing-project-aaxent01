@@ -1,31 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/recipePage"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/recipeImageHeader"
+    <FrameLayout
+        android:id="@+id/imageHeaderContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_empty_image"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintDimensionRatio="16:9" />
+        app:layout_constraintDimensionRatio="16:9">
 
-    <ImageButton
-        android:id="@+id/previousPageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_back_arrow"
-        app:layout_constraintTop_toTopOf="@id/recipeImageHeader"
-        app:layout_constraintStart_toStartOf="@id/recipeImageHeader" />
+        <ImageView
+            android:id="@+id/recipeImageHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_empty_image"
+            android:contentDescription="@string/recipe_image" />
+
+        <TextView
+            android:id="@+id/tvRecipeImageLabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/recipe_image"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:background="#80000000"/>
+
+        <ImageButton
+            android:id="@+id/previousPageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="@string/previous_button"/>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/recipeName"
@@ -35,7 +50,7 @@
         android:text="@string/recipe_name"
         android:textAppearance="?attr/textAppearanceHeadline6"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@id/recipeImageHeader"
+        app:layout_constraintTop_toBottomOf="@id/imageHeaderContainer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
