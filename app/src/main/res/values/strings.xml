@@ -15,4 +15,7 @@
         3. Step  \n
     </string>
     <string name="add_recipe_image">Press to add Recipe Image</string>
+    <string name="add_recipe_name">Add Recipe name</string>
+    <string name="add_cooking_time">Add Cooking time</string>
+    <string name="save_recipe">Save Recipe</string>
 </resources>
