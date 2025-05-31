@@ -18,4 +18,6 @@
     <string name="add_recipe_name">Add Recipe name</string>
     <string name="add_cooking_time">Add Cooking time</string>
     <string name="save_recipe">Save Recipe</string>
+    <string name="add_ingredients">Add Ingredients</string>
+    <string name="add_cooking_steps">Add Cooking Steps</string>
 </resources>
