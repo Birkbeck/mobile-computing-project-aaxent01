@@ -4,6 +4,8 @@
     <string name="previous_button">Previous Page Button</string>
     <string name="recipe_name">Recipe name</string>
     <string name="cooking_time">Cooking time</string>
+    <string name="recipe_ingredients">Ingredients</string>
+    <string name="cooking_steps">Cooking Steps</string>
     <string name="ingredients_placeholder">
         1. Ingredient  \n
         2. Ingredient  \n
@@ -18,6 +20,16 @@
     <string name="add_recipe_name">Add Recipe name</string>
     <string name="add_cooking_time">Add Cooking time</string>
     <string name="save_recipe">Save Recipe</string>
+    <string name="cancel_recipe">Cancel Recipe</string>
     <string name="add_ingredients">Add Ingredients</string>
     <string name="add_cooking_steps">Add Cooking Steps</string>
+    <string-array name="recipe_categories">
+        <item>Breakfast</item>
+        <item>Brunch</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Desserts</item>
+        <item>Other</item>
+    </string-array>
+    <string name="choose_category">Choose category…</string>
 </resources>
