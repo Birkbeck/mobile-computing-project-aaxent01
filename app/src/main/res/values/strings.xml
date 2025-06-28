@@ -9,6 +9,9 @@
     <string name="recipe_other">Other</string>
     <string name="recipe_all_recipes">All Recipes</string>
     <string name="add_recipe">Add Recipe</string>
+    <string name="edit_recipe">Edit Recipe</string>
+    <string name="delete_recipe">Delete Recipe</string>
+    <string name="clock_image">Clock image</string>
     <string name="recipe_image">Recipe Image</string>
     <string name="previous_button">Previous Page Button</string>
     <string name="recipe_name">Recipe name</string>
@@ -25,6 +28,7 @@
         2. Step  \n
         3. Step  \n
     </string>
+    <string name="navigation_arrow">Navigation Arrow</string>
     <string name="add_recipe_image">Press to add Recipe Image</string>
     <string name="add_recipe_name">Add Recipe name</string>
     <string name="add_cooking_time">Add Cooking time</string>

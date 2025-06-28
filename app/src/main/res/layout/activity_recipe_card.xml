@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Recipe name"
+            android:text="@string/recipe_name"
             android:textSize="16sp"/>
 
         <!-- Right: image placeholder -->
