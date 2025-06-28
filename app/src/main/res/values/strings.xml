@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">AndreeaAxente</string>
+    <string name="app_name">Andreea Cooking</string>
+    <string name="recipe_categories">Categories</string>
+    <string name="recipe_breakfast">Breakfast</string>
+    <string name="recipe_brunch">Brunch</string>
+    <string name="recipe_lunch">Lunch</string>
+    <string name="recipe_dinner">Dinner</string>
+    <string name="recipe_desserts">Desserts</string>
+    <string name="recipe_other">Other</string>
+    <string name="recipe_all_recipes">All Recipes</string>
+    <string name="add_recipe">Add Recipe</string>
     <string name="recipe_image">Recipe Image</string>
     <string name="previous_button">Previous Page Button</string>
     <string name="recipe_name">Recipe name</string>
