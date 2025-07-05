@@ -29,4 +29,8 @@ interface RecipeDao {
     //delete a present recipe in the database
     @Delete
     fun delete(recipe: Recipe)
+
+    //get all recipes that contain the string specified by the user
+    @Query("SELECT * FROM recipes WHERE ingredients LIKE '%' || :ingredient || '%'")
+    fun getRecipesByIngredient(ingredient: String): List<Recipe>
 }

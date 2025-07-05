@@ -19,7 +19,9 @@ import androidx.core.net.toUri
 //this will display a list of recipes by categories and the possibility of new recipes to be added
 class CategoryActivity : AppCompatActivity() {
 
-    companion object { const val EXTRA_CATEGORY_NAME = "CATEGORY_NAME" }
+    companion object {
+        const val EXTRA_CATEGORY_NAME = "CATEGORY_NAME"
+        const val EXTRA_SEARCH_QUERY    = "SEARCH_QUERY"}
 
     private lateinit var binding: ActivityCategoryBinding
     private lateinit var category: String
@@ -29,9 +31,15 @@ class CategoryActivity : AppCompatActivity() {
         binding = ActivityCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //gets the chosen category, the default is set to All
-        category = intent.getStringExtra(EXTRA_CATEGORY_NAME) ?: "All"
-        binding.categoryTitleBar.title = category
+        //it will start the search query if the user provides one otherwise
+        // gets the chosen category, the default is set to All
+        val searchQuery = intent.getStringExtra(EXTRA_SEARCH_QUERY)
+        if (searchQuery != null) {
+            binding.categoryTitleBar.title = "Search: \"$searchQuery\""
+        } else {
+            category = intent.getStringExtra(EXTRA_CATEGORY_NAME) ?: "All"
+            binding.categoryTitleBar.title = category
+        }
         binding.categoryTitleBar.setNavigationOnClickListener { finish() }
 
         //adds a new recipe inside the chosen category
@@ -43,13 +51,21 @@ class CategoryActivity : AppCompatActivity() {
         }
     }
 
-    //when the activity resumes the recipes are loaded
+    //when the activity resumes if the search query is executed get recipe by ingredient otherwise
+    // get all recipes or recipes of the category selected
     override fun onResume() {
         super.onResume()
         lifecycleScope.launch {
             val recipes = withContext(Dispatchers.IO) {
-                if (category == "All") RecipeRepository.getAllRecipes(this@CategoryActivity)
-                else RecipeRepository.getRecipesByCategory(this@CategoryActivity, category)
+                val searchQuery = intent.getStringExtra(EXTRA_SEARCH_QUERY)
+                if (searchQuery != null) {
+                    RecipeRepository.getRecipesByIngredient(this@CategoryActivity, searchQuery)
+                } else {
+                    if (category == "All")
+                        RecipeRepository.getAllRecipes(this@CategoryActivity)
+                    else
+                        RecipeRepository.getRecipesByCategory(this@CategoryActivity, category)
+                }
             }
             displayRecipes(recipes)
         }

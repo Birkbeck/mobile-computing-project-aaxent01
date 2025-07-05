@@ -27,6 +27,23 @@ class MainActivity : AppCompatActivity() {
         binding.addRecipeButton.setOnClickListener {
             startActivity(Intent(this, AddEditRecipeActivity::class.java))
         }
+        // this allows the user to search for recipe by ingredient
+        binding.searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                query?.takeIf { it.isNotBlank() }?.let {
+                    Intent(this@MainActivity, CategoryActivity::class.java).also { intent ->
+                        intent.putExtra(CategoryActivity.EXTRA_SEARCH_QUERY, it.trim())
+                        startActivity(intent)
+                    }
+                }
+                binding.searchView.clearFocus()
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+        })
     }
     //this function will start CategoryActivity with the selected category
     private fun openCategory(cat: String) {

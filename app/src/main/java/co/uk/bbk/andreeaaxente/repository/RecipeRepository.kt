@@ -34,4 +34,8 @@ object RecipeRepository {
     //retrieve a recipe by the specific category
     suspend fun getRecipesByCategory(context: Context, category: String): List<Recipe> =
         dao(context).getRecipesByCategory(category)
+
+    //using DAO retrieve all recipe that contain the specified ingredient
+    suspend fun getRecipesByIngredient(context: Context, ingredient: String): List<Recipe> =
+        dao(context).getRecipesByIngredient(ingredient)
 }
